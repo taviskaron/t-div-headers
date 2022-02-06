@@ -1,0 +1,127 @@
+header#site-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 15px 30px;
+    background: #012430;
+    font-size: 10pt;
+}
+
+header#site-header a {
+    color: #cecece;
+    text-decoration: none;
+}
+
+header#site-header #site-header-container {
+    display: flex;
+    align-items: center;
+}
+
+header#site-header #site-header-logo {
+    width: 30px;
+    flex-basis: 30px;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+header#site-header #site-header-logo img {
+    width: 100%;
+}
+
+header#site-header nav#site-header-main-menu-container {
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+
+header#site-header nav#site-header-auth-container  {
+    font-size: 10pt;
+    margin-left: 15px;
+}
+
+header#site-header nav#site-header-auth-container a#site-header-auth-button {
+    background: #0097ad;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+header#site-header #site-header-main-menu {
+    position: relative;
+    list-style: none;
+    font-weight: 400;
+    font-size: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0;
+}
+
+header#site-header #site-header-main-menu li {
+    font-size: 0.8rem;
+    display: inline-block;
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 5;
+    min-width: 150px;
+    border-left: 1px solid #666666;
+    text-align: center;
+    color: #cecece;
+}
+
+header#site-header #site-header-main-menu li:first-child {
+    border-left: none;
+}
+
+header#site-header #site-header-main-menu li a:hover {
+    color: #0097ad;
+    transition: all 0.3s ease;
+}
+
+li {
+    margin: 0;
+}
+
+.dropping-menu {
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 48px;
+}
+
+.dropping-menu div {
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    -webkit-transition: all 0.5s 0.1s;
+    -moz-transition: all 0.5s 0.1s;
+    -ms-transition: all 0.5s 0.1s;
+    transition: all 0.5s 0.1s;
+    position: relative;
+}
+
+.dropping-menu li {
+    display: block;
+    padding: 0;
+    width: 100%;
+    background: #012430;
+    color: #cecece;
+    font-size: 0.7rem!important;
+}
+
+.dropping-menu li:hover {
+    background: #0097ad;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#site-header-main-menu li.has-dropping-menu:hover ul.dropping-menu div {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}

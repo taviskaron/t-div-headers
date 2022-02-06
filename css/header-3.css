@@ -1,0 +1,292 @@
+body {
+    background: #cecece;
+}
+
+header#site-header {
+    background: #ffffff;
+    padding: 10px 60px;
+    transition: all 0.3s ease;
+    height: 70px;
+    z-index: 2;
+    border: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header#site-header a {
+    color: #999999;
+}
+
+header#site-header a:hover {
+    color: #0097ad;
+    transition: all 0.3s ease;
+}
+
+header#site-header div#site-header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header#site-header div#site-header-hamburger-menu {
+    padding: 0 30px 0 0;
+    display: none;
+}
+
+header#site-header div#site-header-hamburger-menu i {
+    font-size: 18pt;
+    color: #666666;
+    cursor: pointer;
+}
+
+header#site-header #side-menu-toggle-button {
+    cursor: pointer;
+    z-index: 99;
+    display: none;
+    position: absolute;
+}
+
+header#site-header nav#site-header-side-menu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    transform: translateX(-100%);
+    background: #eeeeee;
+    transition: all 0.2s ease;
+    padding: 30px;
+}
+
+header#site-header #site-header-hamburger-menu input[type=checkbox]:checked ~ nav#site-header-side-menu {
+    transform: translateX(0);
+    transition: all 0.2s ease;
+}
+
+header#site-header nav#site-header-side-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+header#site-header nav#site-header-side-menu ul li {
+    list-style: none;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+header#site-header nav#site-header-side-menu ul li:last-child {
+    border-bottom: none;
+}
+
+header#site-header nav#site-header-side-menu ul li a {
+    text-decoration: none;
+}
+
+header#site-header nav#site-header-side-menu div.social-buttons {
+    margin-top: 30px;
+}
+
+header#site-header nav#site-header-side-menu div.social-buttons i {
+    margin-right: 15px;
+}
+
+header#site-header div#site-header-logo {
+    width: 30px;
+}
+
+header#site-header div#site-header-logo img {
+    width: 100%;
+}
+
+header#site-header nav#site-header-main-menu {
+    padding: 0 30px;
+    margin: -10px 0;
+    display: flex;
+    align-items: center;
+}
+
+header#site-header nav#site-header-main-menu div.dropdown a {
+    position: relative;
+    cursor: pointer;
+}
+
+header#site-header nav#site-header-main-menu .site-header-main-menu-link:hover {
+    cursor: pointer;
+}
+
+header#site-header nav#site-header-main-menu .site-header-main-menu-link:hover > a {
+    color: #0097ad!important;
+}
+
+header#site-header nav#site-header-main-menu .site-header-main-menu-link a.header-link {
+    font-size: 12pt;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    height: 70px;
+    line-height: 70px;
+    color: #999999;
+    z-index: 10;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content {
+    display: none;
+    opacity: 1;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 10px 60px;
+    transition: all 0.2s ease-in-out;
+}
+
+header#site-header nav#site-header-main-menu .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+header#site-header nav#site-header-main-menu div.dropdown a.header-link:after {
+    font-family: FontAwesome!important;
+    content: " \f078";
+}
+
+header#site-header nav#site-header-main-menu div.dropdown a.header-link:hover:after {
+    font-family: FontAwesome!important;
+    content: " \f077";
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-container {
+    display: flex;
+    align-items: start;
+    margin: 30px auto;
+    max-width: 1440px;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-article {
+    flex-basis: 25%;
+    margin-right: 60px;
+    height: 300px;
+}
+
+div#previewimage-1 {
+    background: url("../img/breakfast.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+div#previewimage-2 {
+    background: url("../img/plate.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+div#previewimage-3 {
+    background: url("../img/bottle.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+div#previewimage-4 {
+    background: url("../img/vitamin.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+div#previewimage-5 {
+    background: url("../img/mission.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+div#previewimage-6 {
+    background: url("../img/company.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-article .dropdown-content-article-previewimage {
+    width: 100%;
+    height: 200px;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-article h4.dropdown-content-article-title {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-article p.dropdown-content-article-subtitle {
+    font-size: 11pt;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-side-menu ul {
+    margin: 0;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-side-menu ul li {
+    list-style: none;
+    padding: 7px 0;
+    margin: 0;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-side-menu ul li a {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+header#site-header nav#site-header-main-menu .dropdown-content-side-menu ul li:first-child a {
+    font-weight: bold;
+}
+
+header#site-header div#site-header-user-container {
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+header#site-header div#site-header-user-container nav#site-header-user-menu ul {
+    margin: 0;
+}
+
+header#site-header div#site-header-user-container nav#site-header-user-menu ul li {
+    list-style: none;
+    display: inline;
+    padding: 0 15px;
+}
+
+
+/*====== Media Queries ======*/
+
+@media screen and (max-width: 1200px){
+
+    header#site-header {
+        padding: 10px 30px;
+        width: 100%;
+        height: 60px;
+    }
+
+    header#site-header nav#site-header-main-menu {
+        display: none;
+    }
+
+    header#site-header div#site-header-hamburger-menu {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
