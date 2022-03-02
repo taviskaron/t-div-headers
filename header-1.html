@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header-1.css">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="webfont/css/fontello.css">
     <meta charset="utf-8">
 </head>
 <body>
@@ -11,49 +11,53 @@
 <header id="site-header">
     <div id="site-header-container">
 
-        <div id="site-header-hamburger-menu">
-            <input type="checkbox" id="side-menu-toggle-button" autocomplete="off">
-            <label for="side-menu-toggle-button"><i class="fa fa-bars"></i></label>
-            <nav id="site-header-side-menu">
-                <ul>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Обратная связь</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-                <div class="social-buttons">
-                    <i class="fa fa-facebook"></i><i class="fa fa-telegram"></i><i class="fa fa-pinterest"></i><i class="fa fa-instagram"></i>
-                </div>
-            </nav>
-        </div>
 
         <div id="site-header-logo">
             <img src="img/logo.png" alt="">
         </div>
 
-        <nav id="site-header-main-menu">
-            <ul>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Обратная связь</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
+
+        <input type="checkbox" class="toggleSideMenu" id="toggleSideMenu" autocomplete="off">
+        <label for="toggleSideMenu" class="hamburger-icon">
+            <div class="hamburger-menu-line diagonal-1"></div>
+            <div class="hamburger-menu-line horizontal"></div>
+            <div class="hamburger-menu-line diagonal-2"></div>
+        </label>
+
+        <div id="side-menu-container">
+            <div id="before-side-menu">
+                <span>Контент до бокового меню</span>
+            </div>
+            <nav id="top-menu">
+                <ul id="main-menu" >
+                    <li class="main-menu-item"><a href="#">Главная</a></li>
+                    <li class="main-menu-item"><a href="#">О компании</a></li>
+                    <li class="main-menu-item"><a href="#">Каталог</a></li>
+                    <li class="main-menu-item"><a href="#">Доставка</a></li>
+                    <li class="main-menu-item"><a href="#">Новости</a></li>
+                    <li class="main-menu-item"><a href="#">Обратная связь</a></li>
+                </ul>
+            </nav>
+            <div id="after-side-menu">
+                <span>Контент после бокового меню</span>
+                <div class="social-buttons">
+                    <i class="icon-linkedin"></i><i class="icon-facebook-squared"></i><i class="icon-vkontakte"></i><i class="icon-twitter"></i>
+                </div>
+            </div>
+        </div>
 
         <div id="site-header-search">
             <div id="site-header-search-container">
                 <form action="" autocomplete="on">
-                    <input id="search" name="search" type="text" placeholder="Поиск..."><button id="search_submit" type="submit"><i class="fa fa-search"></i></button>
+                    <input id="search" name="search" type="text" placeholder="Поиск..."><button id="search_submit" type="submit"><i class="icon-search"></i></button>
                 </form>
             </div>
         </div>
 
 
         <div id="site-header-auth-container">
-            <button id="site-header-login-button" class="site-header-auth-button"><i class="fa fa-lock"></i><span>Войти</span></button>
-            <button id="site-header-registration-button" class="site-header-auth-button"><i class="fa fa-user"></i><span>Регистрация</span></button>
+            <button id="site-header-login-button" class="site-header-auth-button"><i class="icon-logout"></i><span>Войти</span></button>
+            <button id="site-header-registration-button" class="site-header-auth-button"><i class="icon-user"></i><span>Регистрация</span></button>
         </div>
 
     </div>
