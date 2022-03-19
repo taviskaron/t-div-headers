@@ -5,10 +5,10 @@
 }
 
 body {
-    padding:0;
+    padding: 0;
     margin: 0;
     background-color: #cccccc;
-    font-family:  sans-serif;
+    font-family: sans-serif;
 }
 
 .main-container {
@@ -19,18 +19,9 @@ body {
     padding: 50px 50px 100px 100px;
     font-size: 12pt;
     line-height: 20pt;
-    color:#555555;
+    color: #555555;
     height: 200vh;
 }
-
-
-
-
-
-
-
-
-
 
 /*header styling*/
 
@@ -51,7 +42,7 @@ header#site-header a {
 }
 
 header#site-header a:hover {
-    color: #0097ad!important;
+    color: #0097ad !important;
     transition: all 0.2s ease;
 }
 
@@ -64,29 +55,29 @@ header#site-header div#site-header-auth-container button {
     outline: 0;
     background: transparent;
     height: 30px;
-    padding: 0 10px;
-    border: 1px solid #999999;
-    border-radius: 5px;
+    padding: 0 5px;
+    border: 0;
     font-family: "Open Sans", sans-serif;
-    font-size: 10pt;
+    font-size: 11pt;
     cursor: pointer;
-    color: #999999;
+    color: #666666;
 }
 
 header#site-header div#site-header-container {
     display: flex;
     align-items: center;
+    height: 40px;
 }
-
 
 header#site-header div#site-header-logo {
     width: auto;
     padding: 0;
     margin-right: 30px;
+    height: 30px;
 }
 
 header#site-header div#site-header-logo img {
-    width: 30px;
+    height: 30px;
 }
 
 header#site-header #site-header-search {
@@ -96,7 +87,6 @@ header#site-header #site-header-search {
     margin-left: auto;
     margin-right: 5px;
 }
-
 
 header#site-header ul#main-menu {
     padding: 0;
@@ -132,6 +122,10 @@ header#site-header .social-buttons i:last-child {
     margin-right: 0;
 }
 
+header#site-header #site-header-search {
+    flex-grow: 4;
+}
+
 header#site-header #site-header-search-container {
     position: relative;
     height: 30px;
@@ -162,7 +156,7 @@ header#site-header #site-header-search-container input[type="text"]:focus:hover 
 }
 
 header#site-header #site-header-search-container input[type="text"]:focus {
-    width: 350px;
+    width: calc(100% - 50px);
     z-index: 1;
     border-bottom: 1px solid #999999;
     cursor: text;
@@ -172,8 +166,7 @@ header#site-header #site-header-search-container input[type="text"]:focus {
 header#site-header #site-header-search-container button#search_submit {
     height: 30px;
     width: 30px;
-    float: right;
-    border: 1px solid #999999;
+    border: none;
     color: #999999;
     background: transparent;
     position: absolute;
@@ -183,16 +176,13 @@ header#site-header #site-header-search-container button#search_submit {
     cursor: pointer;
     transition: opacity 0.3s ease;
     padding: 0;
-    border-radius: 5px;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 header#site-header div#site-header-auth-container {
     justify-content: flex-end;
-}
-
-header#site-header div#site-header-auth-container .site-header-auth-button {
-    margin-left: 5px;
+    text-align: right;
+    flex-shrink: 0;
 }
 
 header#site-header div#site-header-auth-container .site-header-auth-button:hover {
@@ -203,30 +193,15 @@ header#site-header div#site-header-auth-container .site-header-auth-button:hover
 
 header#site-header div#site-header-auth-container .site-header-auth-button i:after {
     content: "";
-    margin-right: 0.68em;
+    margin-right: 0.32em;
 }
-
-header#site-header div#site-header-auth-container #site-header-registration-button {
-    background: #0097ad;
-    color: #fafafa;
-    border-color: #0097ad;
-}
-
-
-
-
-
-
-
-
-
 
 /*mobile menu styling*/
 
 #side-menu-container {
+    padding-right: 20px;
     transition: all 0.3s ease-in-out;
 }
-
 
 header #side-menu-container #before-side-menu,
 header #side-menu-container #after-side-menu {
@@ -243,15 +218,12 @@ input[type=checkbox]#toggleSideMenu {
 
 
 
-
-
-
 /*media queries*/
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
-    header#site-header #site-header-search-container input[type="text"]:focus {
+    /*header#site-header #site-header-search-container input[type="text"]:focus {
         width: 250px;
-    }
+    }*/
 }
 
 @media screen and (max-width: 1200px) {
@@ -268,12 +240,14 @@ input[type=checkbox]#toggleSideMenu {
         height: 60px;
     }
 
+    header#site-header div#site-header-container {
+        height: 30px;
+    }
 
     header#site-header div#site-header-logo {
         margin-right: 10px;
-        margin-left: 30px;
+        margin-left: 35px;
     }
-
 
     /*styling the container for the menu*/
     #side-menu-container {
@@ -297,12 +271,10 @@ input[type=checkbox]#toggleSideMenu {
     }
 
     header #side-menu-container #before-side-menu span,
-    header #side-menu-container #after-side-menu span{
-       font-size: 10pt;
-       font-style: italic;
+    header #side-menu-container #after-side-menu span {
+        font-size: 10pt;
+        font-style: italic;
     }
-
-
 
     /*styling the menu inside the <nav> block*/
     #top-menu {
@@ -314,7 +286,9 @@ input[type=checkbox]#toggleSideMenu {
     header#site-header ul#main-menu li {
         display: block;
         width: 100%;
-        padding: 20px;
+        padding: 15px 20px;
+        font-size: 13pt;
+        border-bottom: 1px solid #dddddd;
     }
 
     header#site-header ul#main-menu li:last-of-type {
@@ -322,7 +296,8 @@ input[type=checkbox]#toggleSideMenu {
     }
 
     header#site-header ul#main-menu li a {
-        margin: 0; padding: 0;
+        margin: 0;
+        padding: 0;
     }
 
     input[type=checkbox]#toggleSideMenu {
@@ -333,8 +308,6 @@ input[type=checkbox]#toggleSideMenu {
     input[type="checkbox"]#toggleSideMenu:checked ~ #side-menu-container {
         transform: translateX(250px);
     }
-
-
 
     /*hamburger icon styling*/
     .hamburger-icon {
@@ -393,6 +366,11 @@ input[type=checkbox]#toggleSideMenu {
         transform: rotate(-135deg);
         margin-top: -9px;
     }
+
+    header#site-header #site-header-search {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -404,7 +382,4 @@ input[type=checkbox]#toggleSideMenu {
         margin-right: 0;
     }
 
-    header#site-header #site-header-search-container input[type="text"]:focus {
-        width: 100%;
-    }
 }
